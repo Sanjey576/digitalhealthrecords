@@ -1,0 +1,228 @@
+
+html {
+  font-size: 90%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background-color: #f4f9fc;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  background-color: #4e89ae;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar h1 {
+  font-size: 1.5rem;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.navbar nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  position: relative;
+}
+
+.navbar nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  left: 0;
+  bottom: -4px;
+  transition: width 0.3s ease-in-out;
+}
+
+.navbar nav a:hover::after {
+  width: 100%;
+}
+
+/* ===== Hero Section ===== */
+.hero-full {
+  background: linear-gradient(rgba(0, 123, 255, 0.25), rgba(0, 123, 255, 0.25)),
+              url('./assets/doctor.webp') center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 0 1.5rem;
+}
+
+.hero-content {
+  max-width: 680px;
+  animation: fadeIn 1.2s ease;
+}
+
+.hero-content h2 {
+  font-size: clamp(1.8rem, 4.5vw, 2.5rem);
+}
+
+.hero-content p {
+  font-size: 1.05rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.primary,
+.outline {
+  padding: 0.7rem 1.4rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.primary {
+  background-color: white;
+  color: #4e89ae;
+  border: none;
+}
+
+.primary:hover {
+  background-color: #dbefff;
+}
+
+.outline {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.outline:hover {
+  background-color: white;
+  color: #4e89ae;
+}
+
+
+.features {
+  padding: 4rem 1.5rem;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.features h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.8rem;
+  color: #4e89ae;
+}
+
+.feature-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: #f1faff;
+  border-left: 6px solid #9fd3c7;
+  padding: 1.5rem;
+  border-radius: 10px;
+  max-width: 280px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  text-align: left;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card span {
+  font-size: 1.75rem;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.card h4 {
+  margin-bottom: 0.4rem;
+  color: #333;
+}
+
+.card p {
+  font-size: 0.88rem;
+  color: #555;
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: #4e89ae;
+  color: white;
+  text-align: center;
+  padding: 1.2rem 1rem;
+  font-size: 0.9rem;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Responsive Adjustments ===== */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar nav {
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 1rem;
+  }
+
+  .hero-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .feature-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 90%;
+  }
+}

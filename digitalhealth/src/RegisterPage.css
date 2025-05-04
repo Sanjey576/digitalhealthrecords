@@ -1,0 +1,72 @@
+
+.register-container {
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  text-align: center;
+}
+
+/* Heading */
+.register-container h2 {
+  font-size: 1.8rem;
+  color: #4e89ae;
+  margin-bottom: 1.5rem;
+}
+
+/* Inputs and Select */
+.register-container input,
+.register-container select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.register-container input:focus,
+.register-container select:focus {
+  border-color: #4e89ae;
+  outline: none;
+}
+
+/* Submit Button */
+.register-container button[type="submit"] {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #4e89ae;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.register-container button[type="submit"]:hover {
+  background-color: #357ca5;
+}
+
+/* Back Button */
+.back-btn {
+  margin-top: 1.5rem;
+  background: transparent;
+  color: #4e89ae;
+  font-weight: bold;
+  border: 2px solid #4e89ae;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: #4e89ae;
+  color: white;
+}
